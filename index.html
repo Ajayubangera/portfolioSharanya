@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sharanya - Creative Developer and 3D Artist Portfolio. Specialized in high-performance web applications, interactive 3D experiences, and WebGL." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Style Sheet Link -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- External CDNs: Three.js and GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Custom Logic Script -->
+  <script src="main.js" defer></script>
+
+  <title>Sharanya | Creative Developer & 3D Artist</title>
+</head>
+
+<body>
+  <!-- 3D Canvas Background -->
+  <div id="canvas-container">
+    <canvas id="webgl-canvas"></canvas>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- Floating Glassmorphic Header -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>Sharanya<span class="logo-accent">.R /&gt;</span>
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav">
+    <div class="mobile-nav-links">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <main class="content-wrapper">
+    <!-- Section 1: Hero -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge">AVAILABLE FOR FREELANCE & CONTRACTS</span>
+          <h1 class="hero-title">
+            Crafting <span class="gradient-text">Immersive</span> <br />
+            Digital Dimensions
+          </h1>
+          <p class="hero-subtitle">
+            Creative Developer & 3D Web Artist specializing in highly interactive, responsive WebGL applications and
+            sleek, modern user interfaces.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View Work
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- Space for 3D interaction tip -->
+          <div class="interaction-tip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+            </svg>
+            Drag to interact with 3D space
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+      </a>
+    </section>
+
+    <!-- Section 2: About -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Discover</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-bio">
+            <h3 class="bio-title">Hello, I'm Sharanya.</h3>
+            <p class="bio-text">
+              I am a front-end engineer and 3D web developer with over 5 years of experience bridging the gap between
+              design and technology. I build interactive websites that combine sleek UI animations with 3D WebGL scenes.
+            </p>
+            <p class="bio-text">
+              My goal is to push the boundaries of what is possible on the web, creating layouts that are not just
+              informative, but engaging, memorable, and high-performing.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-num">5+</div>
+                <div class="stat-label">Years Exp.</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">30+</div>
+                <div class="stat-label">Clients Served</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num">15+</div>
+                <div class="stat-label">Web Awards</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-skills">
+            <h3 class="bio-title">Technical Mastery</h3>
+            <div class="skills-container">
+              <!-- Skill Category 1 -->
+              <div class="skill-category">
+                <h4>Creative & 3D</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag">Three.js</span>
+                  <span class="skill-tag">WebGL</span>
+                  <span class="skill-tag">GSAP</span>
+                  <span class="skill-tag">GLSL / Shaders</span>
+                  <span class="skill-tag">Blender</span>
+                </div>
+              </div>
+              <!-- Skill Category 2 -->
+              <div class="skill-category">
+                <h4>Frontend Architecture</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag">HTML5 / CSS3</span>
+                  <span class="skill-tag">JavaScript (ES6+)</span>
+                  <span class="skill-tag">React / Next.js</span>
+                  <span class="skill-tag">Vite</span>
+                  <span class="skill-tag">TypeScript</span>
+                </div>
+              </div>
+              <!-- Skill Category 3 -->
+              <div class="skill-category">
+                <h4>Backend & Deploy</h4>
+                <div class="skill-tags">
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Git / GitHub</span>
+                  <span class="skill-tag">Vercel</span>
+                  <span class="skill-tag">Firebase</span>
+                  <span class="skill-tag">RESTful APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Projects -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portfolio</span>
+          <h2 class="section-title">Featured Works</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <div class="project-placeholder bg-gradient-1">
+                <div class="placeholder-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
+                    <path d="M12 6v12M6 12h12" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Three.js / WebGL / Physics</span>
+              <h3 class="project-title">Nebula Engine</h3>
+              <p class="project-desc">
+                A high-performance GPU particle physics engine for running simulated galactic formations and interactive
+                nebulas in real-time.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <span>Explore Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <div class="project-placeholder bg-gradient-2">
+                <div class="placeholder-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 22h16a2 2 0 002-2V4a2 2 0 00-2-2H4a2 2 0 00-2 2v16a2 2 0 002 2z" />
+                    <path d="M16 2v20M8 2v20" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">CSS / Design System</span>
+              <h3 class="project-title">Aether UI</h3>
+              <p class="project-desc">
+                A premium glassmorphic UI library for modern web layouts. Includes shadows, custom backdrops, and
+                interactive CSS utility sheets.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <span>Explore Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <div class="project-placeholder bg-gradient-3">
+                <div class="placeholder-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">Realtime / Node / WebSockets</span>
+              <h3 class="project-title">Chronos Sync</h3>
+              <p class="project-desc">
+                Ultra-low latency real-time synchronization layer for multi-agent canvases and virtual collaboration
+                spaces.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <span>Explore Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <div class="project-placeholder bg-gradient-4">
+                <div class="placeholder-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m-3-3h6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-tag">WebGL / Shaders / GLSL</span>
+              <h3 class="project-title">Horizon 3D</h3>
+              <p class="project-desc">
+                An interactive virtual gallery space rendering procedural terrain and custom fragment shader sun
+                horizons.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <span>Explore Demo</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Experience -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Chronology</span>
+          <h2 class="section-title">My Journey</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 - 2027 (Expected)</div>
+            <div class="timeline-content">
+              <h3>Computer Science and Design</h3>
+              <h4>B.E Student & Developer</h4>
+              <p>
+                Developing strong foundations in computer graphics, user experience design, software engineering, and
+                core algorithms. Actively blending technical systems with aesthetic design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2024 - Present</div>
+            <div class="timeline-content">
+              <h3>Interactive 3D Web Projects</h3>
+              <h4>Independent Web Developer</h4>
+              <p>
+                Designing custom WebGL experiences, interactive 3D elements, and particle scenes using Three.js and
+                GSAP. Pushing creative boundaries of browser-based design.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 - 2024</div>
+            <div class="timeline-content">
+              <h3>Academic Engineering Projects</h3>
+              <h4>Lead Designer / Frontend Developer</h4>
+              <p>
+                Led group projects building responsive frontend layouts, managing visual styling assets, and
+                implementing interactive client interfaces for college applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Contact -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Collaboration</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="info-title">Let's build something epic.</h3>
+            <p class="info-text">
+              Whether you have a project idea, a position to fill, or just want to chat about Three.js and creative
+              development, drop me a line!
+            </p>
+
+            <div class="info-details">
+              <div class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>rsharanya77@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Upalla, Kerala, India</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" required placeholder=" " />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required placeholder=" " />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" required rows="5" placeholder=" "></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="submit-icon">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Sharanya. All rights reserved.</p>
+      <p>Built with HTML, CSS & Three.js.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
